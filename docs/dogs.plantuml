@@ -29,15 +29,15 @@ entity Group {
     * description: string
 }
 
-entity Attributes {
+entity Attribute {
     * id: <<generated>>
     --
     * name: string
     * description: string
 }
 
-Dog "many" -- "many" Attributes : has
-Dog "1" -- "many" Group : has
+Dog "many" -- "many" Attribute : has
+Dog "many" -- "1" Group : has
 
 
 @enduml
