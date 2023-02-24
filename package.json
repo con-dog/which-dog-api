@@ -2,6 +2,7 @@
   "name": "which-dog",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "devstart": "nodemon ./bin/www",
     "serverstart": "DEBUG=which-dog:* npm start",
