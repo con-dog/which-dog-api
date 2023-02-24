@@ -1,0 +1,43 @@
+@startuml relations
+
+skinparam linetype ortho
+
+entity Dog {
+    * id: <<generated>>
+    --
+    * name: string
+    * summary: string
+    * description: string
+    * group: array[Group]
+    * attributes: array[Attribute]
+    * characteristics: array[Characteristics]
+    * weight: dict
+    * height: dict
+    * lifespan: dict
+    * affection: dict
+    * coat: dict
+    * social: dict
+    * training: dict
+    * cardImageUrl: string
+    * bucketImagesUrl: string
+}
+
+entity Group {
+    * id: <<generated>>
+    --
+    * name: string
+    * description: string
+}
+
+entity Attributes {
+    * id: <<generated>>
+    --
+    * name: string
+    * description: string
+}
+
+Dog "many" -- "many" Attributes : has
+Dog "1" -- "many" Group : has
+
+
+@enduml
