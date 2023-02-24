@@ -3,7 +3,20 @@ const mongoose = import('mongoose');
 const { Schema } = mongoose;
 
 const AttributeSchema = new Schema({
-  name: { type: String, required: true },
+  name: {
+    type: String,
+    enum: [
+      'Apartment',
+      'Family',
+      'Guard',
+      'Hairless',
+      'Hypoallergenic',
+      'Largest',
+      'Smallest',
+      'Smartest',
+    ],
+    required: true,
+  },
   description: { type: String, required: true },
 });
 
