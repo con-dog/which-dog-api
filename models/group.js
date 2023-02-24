@@ -8,7 +8,7 @@ const GroupSchema = new Schema({
 });
 
 GroupSchema.virtual('url').get(function () {
-  return `/dogs/groups/${this._id}`;
+  return `/dogs/groups/${this.name}`;
 });
 
 module.exports = mongoose.model('Group', GroupSchema);
