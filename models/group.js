@@ -3,7 +3,20 @@ const mongoose = import('mongoose');
 const { Schema } = mongoose;
 
 const GroupSchema = new Schema({
-  name: { type: String, required: true },
+  name: {
+    type: String,
+    enum: [
+      'Herding',
+      'Hound',
+      'Miscellaneous',
+      'Non-Sporting',
+      'Sporting',
+      'Terrier',
+      'Toy',
+      'Working',
+    ],
+    required: true,
+  },
   description: { type: String, required: true },
 });
 
